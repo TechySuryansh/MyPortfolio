@@ -5,12 +5,10 @@ import * as THREE from 'three';
 
 const Stars = ({ count = 8000 }) => {
   const ref = useRef();
-  const particlesRef = useRef();
   
-  const [positions, colors, sizes] = useMemo(() => {
+  const [positions, colors] = useMemo(() => {
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
-    const sizes = new Float32Array(count);
     
     for (let i = 0; i < count; i++) {
       // Create multiple layers of stars at different distances
@@ -42,12 +40,9 @@ const Stars = ({ count = 8000 }) => {
         colors[i * 3 + 1] = intensity;
         colors[i * 3 + 2] = intensity;
       }
-      
-      // Varied sizes for depth
-      sizes[i] = Math.random() * 0.8 + 0.2;
     }
     
-    return [positions, colors, sizes];
+    return [positions, colors];
   }, [count]);
 
   useFrame((state) => {

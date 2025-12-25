@@ -38,22 +38,57 @@
   .hero-text {
     @apply font-hero text-6xl md:text-8xl font-black bg-gradient-to-r from-superman-blue via-superman-red to-superman-gold bg-clip-text text-transparent;
     text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
   
   .glow-border {
     @apply border border-krypton-crystal;
-    box-shadow: 0 0 20px rgba(78, 205, 196, 0.3), inset 0 0 20px rgba(78, 205, 196, 0.1);
+    box-shadow: 
+      0 0 20px rgba(78, 205, 196, 0.3), 
+      inset 0 0 20px rgba(78, 205, 196, 0.1),
+      0 0 40px rgba(78, 205, 196, 0.1);
+    animation: border-glow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes border-glow {
+    0% { box-shadow: 0 0 20px rgba(78, 205, 196, 0.3), inset 0 0 20px rgba(78, 205, 196, 0.1); }
+    100% { box-shadow: 0 0 40px rgba(78, 205, 196, 0.6), inset 0 0 30px rgba(78, 205, 196, 0.2); }
   }
   
   .energy-button {
     @apply relative px-8 py-4 bg-gradient-to-r from-superman-blue to-superman-red text-white font-semibold rounded-lg overflow-hidden transition-all duration-500;
-    box-shadow: 0 0 30px rgba(139, 0, 0, 0.6), 0 0 60px rgba(0, 26, 77, 0.4);
+    box-shadow: 
+      0 0 30px rgba(139, 0, 0, 0.6), 
+      0 0 60px rgba(0, 26, 77, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background-size: 200% 200%;
+    animation: energy-pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes energy-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 30px rgba(139, 0, 0, 0.6), 0 0 60px rgba(0, 26, 77, 0.4);
+      background-position: 0% 50%;
+    }
+    50% { 
+      box-shadow: 0 0 50px rgba(139, 0, 0, 0.8), 0 0 100px rgba(0, 26, 77, 0.6);
+      background-position: 100% 50%;
+    }
   }
   
   .energy-button:hover {
     @apply scale-110;
-    box-shadow: 0 0 50px rgba(139, 0, 0, 0.8), 0 0 100px rgba(0, 26, 77, 0.6);
-    transform: translateY(-5px) scale(1.1);
+    box-shadow: 
+      0 0 50px rgba(139, 0, 0, 0.8), 
+      0 0 100px rgba(0, 26, 77, 0.6),
+      0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px) scale(1.1) rotateX(5deg);
   }
   
   .energy-button::before {
@@ -78,14 +113,92 @@
   .krypton-panel {
     @apply bg-gradient-to-br from-superman-dark-light/80 to-superman-dark/60 backdrop-blur-lg rounded-xl p-6;
     border: 1px solid rgba(78, 205, 196, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3), 
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 20px rgba(78, 205, 196, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .krypton-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(78, 205, 196, 0.1), transparent);
+    transition: left 0.5s;
+  }
+  
+  .krypton-panel:hover::before {
+    left: 100%;
   }
   
   .floating-card {
-    @apply transform transition-all duration-300 hover:scale-105 hover:-translate-y-2;
+    @apply transform transition-all duration-500 hover:scale-105 hover:-translate-y-4;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  }
+  
+  .floating-card:hover {
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
   }
   
   .text-glow {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    text-shadow: 
+      0 0 10px currentColor, 
+      0 0 20px currentColor, 
+      0 0 30px currentColor,
+      0 0 40px currentColor;
+    animation: text-glow-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes text-glow-pulse {
+    0% { text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor; }
+    100% { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor, 0 0 50px currentColor; }
+  }
+  
+  /* Holographic effect */
+  .holographic {
+    background: linear-gradient(45deg, 
+      rgba(0, 26, 77, 0.1) 0%,
+      rgba(139, 0, 0, 0.1) 25%,
+      rgba(184, 134, 11, 0.1) 50%,
+      rgba(44, 95, 95, 0.1) 75%,
+      rgba(0, 26, 77, 0.1) 100%);
+    background-size: 400% 400%;
+    animation: holographic-shift 3s ease-in-out infinite;
+  }
+  
+  @keyframes holographic-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Particle trail effect */
+  .particle-trail {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .particle-trail::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, rgba(184, 134, 11, 1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: particle-float 4s linear infinite;
+  }
+  
+  @keyframes particle-float {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    10% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    90% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
   }
 }

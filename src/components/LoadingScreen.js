@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SupermanLogo from './SupermanLogo';
 
 const LoadingScreen = () => {
   return (
@@ -7,7 +8,7 @@ const LoadingScreen = () => {
       <div className="text-center">
         {/* Superman Logo Animation */}
         <motion.div
-          className="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-superman-red to-superman-blue rounded-full flex items-center justify-center"
+          className="mb-8"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 360],
@@ -18,7 +19,7 @@ const LoadingScreen = () => {
             ease: "easeInOut"
           }}
         >
-          <span className="text-superman-gold font-hero font-bold text-3xl">S</span>
+          <SupermanLogo size="2xl" />
         </motion.div>
 
         {/* Loading Text */}

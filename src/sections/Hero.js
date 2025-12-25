@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import SupermanEmblem from '../three/SupermanEmblem';
+import SupermanLogo from '../components/SupermanLogo';
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -36,6 +37,16 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
+          {/* Superman Logo */}
+          <motion.div
+            className="mb-8 flex justify-center"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            <SupermanLogo size="xl" />
+          </motion.div>
+
           {/* Main Title */}
           <motion.h1
             className="hero-text mb-6"
@@ -56,7 +67,7 @@ const Hero = () => {
               transition: { duration: 0.3 }
             }}
           >
-            SURYANSH DEVELOPER
+            SURYANSH SINGH
           </motion.h1>
 
           {/* Subtitle */}
@@ -77,10 +88,13 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.5 }}
           >
             Building scalable web applications with MongoDB, Express.js, React.js, and Node.js.
-            Passionate about clean code, problem-solving, and creating impactful digital solutions.
+            <br />
+            <span className="text-superman-gold">
+              Passionate about clean code, problem-solving, and creating impactful digital solutions.
+            </span>
           </motion.p>
 
-          {/* Enhanced CTA Buttons */}
+          {/* CTA Buttons */}
           <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
@@ -96,24 +110,9 @@ const Hero = () => {
                 transition: { duration: 0.3 }
               }}
               whileTap={{ scale: 0.95 }}
-              animate={{
-                boxShadow: [
-                  '0 0 30px rgba(139, 0, 0, 0.6)',
-                  '0 0 50px rgba(139, 0, 0, 0.8)',
-                  '0 0 30px rgba(139, 0, 0, 0.6)',
-                ]
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
             >
               <span className="relative z-10 flex items-center">
-                View Projects
-                <motion.span 
-                  className="ml-2"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  🚀
-                </motion.span>
+                🚀 View Projects
               </span>
             </motion.button>
 
@@ -129,19 +128,8 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center">
-                Contact Me
-                <motion.span 
-                  className="ml-2"
-                  animate={{ rotate: [0, 15, -15, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  ⚡
-                </motion.span>
+                ⚡ Contact Me
               </span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-superman-gold to-krypton-crystal opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-                initial={false}
-              />
             </motion.button>
           </motion.div>
         </motion.div>
@@ -162,9 +150,9 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Enhanced Floating Particles */}
+      {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className={`absolute rounded-full ${
@@ -177,7 +165,7 @@ const Hero = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -150 - Math.random() * 100, 0],
+              y: [0, -100 - Math.random() * 100, 0],
               x: [0, Math.random() * 50 - 25, 0],
               opacity: [0.4, 0.9, 0.4],
               scale: [1, 1.5, 1],
@@ -187,28 +175,6 @@ const Hero = () => {
               repeat: Infinity,
               delay: Math.random() * 3,
               ease: "easeInOut"
-            }}
-          />
-        ))}
-        
-        {/* Energy Orbs */}
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={`orb-${i}`}
-            className="absolute w-8 h-8 rounded-full bg-gradient-to-r from-superman-blue to-krypton-crystal opacity-20 blur-sm"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + Math.random() * 40}%`,
-            }}
-            animate={{
-              scale: [1, 1.8, 1],
-              opacity: [0.2, 0.6, 0.2],
-              rotate: [0, 360],
-            }}
-            transition={{
-              duration: 3 + i,
-              repeat: Infinity,
-              delay: i * 0.5,
             }}
           />
         ))}

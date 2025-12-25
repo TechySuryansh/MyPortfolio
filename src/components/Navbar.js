@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import SupermanLogo from './SupermanLogo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,14 +59,18 @@ const Navbar = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3 cursor-pointer"
+            onClick={() => scrollToSection('hero')}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-superman-red to-superman-blue rounded-lg flex items-center justify-center">
-              <span className="text-superman-gold font-hero font-bold text-xl">S</span>
+            <SupermanLogo size="sm" />
+            <div className="flex flex-col">
+              <span className="font-hero font-bold text-lg text-superman-gold">
+                SURYANSH
+              </span>
+              <span className="font-hero text-xs text-krypton-crystal -mt-1">
+                PORTFOLIO
+              </span>
             </div>
-            <span className="font-hero font-bold text-xl text-superman-gold">
-              PORTFOLIO
-            </span>
           </motion.div>
 
           {/* Navigation Links */}
