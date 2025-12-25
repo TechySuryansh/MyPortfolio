@@ -9,12 +9,12 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "3D Portfolio Website",
-      category: "3D Web Experience",
-      description: "An immersive 3D portfolio built with React Three Fiber, featuring interactive elements and smooth animations.",
-      longDescription: "This project showcases advanced 3D web development techniques using React Three Fiber and Three.js. Features include interactive 3D models, particle systems, and responsive design that works across all devices.",
+      title: "E-Commerce MERN Application",
+      category: "Full Stack Web Application",
+      description: "Complete e-commerce platform with user authentication, product management, shopping cart, and payment integration using Stripe API.",
+      longDescription: "A comprehensive e-commerce solution built with the MERN stack featuring user registration/login, product catalog with search and filtering, shopping cart functionality, order management, and secure payment processing. Includes admin panel for product and order management.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Stripe API", "JWT"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true,
@@ -22,12 +22,12 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "E-Commerce Platform",
-      category: "Full Stack Application",
-      description: "Modern e-commerce solution with real-time inventory, payment integration, and admin dashboard.",
-      longDescription: "A complete e-commerce platform built with React and Node.js, featuring user authentication, payment processing, inventory management, and a comprehensive admin panel.",
+      title: "Social Media Dashboard",
+      category: "MERN Stack Application",
+      description: "Real-time social media platform with posts, comments, likes, and user profiles. Features real-time notifications and responsive design.",
+      longDescription: "A modern social media application with real-time features including post creation, commenting system, like/unlike functionality, user profiles, friend connections, and live notifications using Socket.io for real-time communication.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "Cloudinary"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true,
@@ -35,12 +35,12 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "AI Chat Interface",
-      category: "AI Integration",
-      description: "Intelligent chat interface with natural language processing and real-time responses.",
-      longDescription: "An advanced chat interface that integrates with AI APIs to provide intelligent responses, featuring real-time messaging, conversation history, and customizable AI personalities.",
+      title: "Task Management System",
+      category: "Productivity Application",
+      description: "Collaborative task management tool with team features, project organization, and progress tracking.",
+      longDescription: "A comprehensive project management application allowing teams to create projects, assign tasks, track progress, set deadlines, and collaborate effectively. Features include drag-and-drop task boards, file uploads, and team communication.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "OpenAI API", "Socket.io", "Express"],
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Multer", "JWT"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
@@ -48,12 +48,12 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Data Visualization Dashboard",
-      category: "Data Analytics",
-      description: "Interactive dashboard for complex data visualization with real-time updates and filtering.",
-      longDescription: "A comprehensive data visualization platform that transforms complex datasets into interactive charts and graphs, featuring real-time updates, advanced filtering, and export capabilities.",
+      title: "Weather Dashboard",
+      category: "API Integration Project",
+      description: "Interactive weather application with location-based forecasts, weather maps, and historical data visualization.",
+      longDescription: "A responsive weather application that provides current weather conditions, 7-day forecasts, weather maps, and historical weather data. Features geolocation support, city search, and beautiful data visualizations using Chart.js.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "D3.js", "Chart.js", "Python API"],
+      technologies: ["React.js", "OpenWeather API", "Chart.js", "Geolocation API"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
@@ -61,12 +61,12 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "Mobile-First PWA",
-      category: "Progressive Web App",
-      description: "High-performance PWA with offline capabilities and native app-like experience.",
-      longDescription: "A progressive web application that delivers native app performance in the browser, featuring offline functionality, push notifications, and seamless mobile experience.",
+      title: "Blog Platform",
+      category: "Content Management System",
+      description: "Full-featured blogging platform with rich text editor, categories, tags, and comment system.",
+      longDescription: "A complete blogging solution with user authentication, rich text editor for creating posts, category and tag management, comment system with moderation, search functionality, and responsive design for optimal reading experience.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Service Workers", "IndexedDB", "Web Push"],
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Quill.js", "Multer"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
@@ -74,12 +74,12 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "Real-time Collaboration Tool",
-      category: "Collaborative Platform",
-      description: "Multi-user collaboration platform with real-time editing and communication features.",
-      longDescription: "A real-time collaboration platform that enables multiple users to work together seamlessly, featuring live editing, video calls, screen sharing, and project management tools.",
+      title: "Expense Tracker",
+      category: "Personal Finance App",
+      description: "Personal finance management application with expense tracking, budget planning, and financial insights.",
+      longDescription: "A comprehensive expense tracking application that helps users manage their finances with features like expense categorization, budget setting, financial goal tracking, and detailed analytics with charts and reports for better financial planning.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "WebRTC", "Socket.io", "Firebase"],
+      technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Chart.js", "JWT"],
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
@@ -126,8 +126,9 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-superman-blue to-superman-red mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Each project represents a mission accomplished, a problem solved, 
-            and a step forward in the digital realm.
+            A showcase of my MERN stack projects. Each application demonstrates 
+            my skills in full-stack development, problem-solving, and creating 
+            user-focused solutions.
           </p>
         </motion.div>
 

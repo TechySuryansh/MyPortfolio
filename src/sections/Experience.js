@@ -7,59 +7,59 @@ const Experience = () => {
 
   const journeySteps = [
     {
-      year: "2021",
-      title: "The Awakening",
-      role: "Self-Taught Developer",
-      company: "Personal Journey",
-      description: "Discovered the power of code and began the transformation from ordinary to extraordinary. Started with HTML, CSS, and JavaScript fundamentals.",
-      icon: "🌟",
+      year: "2022",
+      title: "The Beginning",
+      role: "Started B.Tech Journey",
+      company: "Newton School of Technology",
+      description: "Began my computer science education and discovered the fascinating world of programming. Started with C++ and basic algorithms, laying the foundation for my development career.",
+      icon: "🎓",
       color: "from-krypton-crystal to-krypton-energy",
       achievements: [
-        "Built first responsive website",
-        "Mastered JavaScript fundamentals",
-        "Completed 100+ coding challenges"
-      ]
-    },
-    {
-      year: "2022",
-      title: "Rising Hero",
-      role: "Junior Frontend Developer",
-      company: "TechStart Solutions",
-      description: "Joined my first development team and learned the art of collaboration. Specialized in React development and modern web technologies.",
-      icon: "🚀",
-      color: "from-superman-blue to-superman-blue-light",
-      achievements: [
-        "Developed 5+ React applications",
-        "Improved team productivity by 30%",
-        "Mentored 2 junior developers"
+        "Learned programming fundamentals",
+        "Started with C++ and DSA",
+        "Built first console applications"
       ]
     },
     {
       year: "2023",
-      title: "Guardian of Code",
-      role: "Frontend Developer",
-      company: "Digital Innovations Inc",
-      description: "Embraced advanced technologies and 3D web development. Led projects that pushed the boundaries of what's possible in the browser.",
-      icon: "⚡",
-      color: "from-superman-red to-superman-red-light",
+      title: "Web Development Discovery",
+      role: "MERN Stack Learning",
+      company: "Self-Learning & Projects",
+      description: "Discovered web development and fell in love with the MERN stack. Started building full-stack applications and understanding how frontend and backend work together.",
+      icon: "🌐",
+      color: "from-superman-blue to-superman-blue-light",
       achievements: [
-        "Implemented Three.js in production",
-        "Led team of 4 developers",
-        "Delivered 10+ client projects"
+        "Mastered React.js fundamentals",
+        "Built first MERN stack project",
+        "Learned MongoDB and Express.js"
       ]
     },
     {
       year: "2024",
-      title: "Master of the Web",
-      role: "Senior Frontend Developer",
-      company: "Future Web Technologies",
-      description: "Reached new heights in web development mastery. Now creating immersive experiences that inspire and delight users across the digital universe.",
-      icon: "💎",
+      title: "Industry Experience",
+      role: "Software Development Intern",
+      company: "Alphavima Technologies",
+      description: "Gained real-world experience working on production-level projects. Collaborated with experienced developers and learned industry best practices and team workflows.",
+      icon: "💼",
+      color: "from-superman-red to-superman-red-light",
+      achievements: [
+        "Worked on production applications",
+        "Collaborated with development teams",
+        "Learned industry best practices"
+      ]
+    },
+    {
+      year: "2024",
+      title: "Problem Solving Master",
+      role: "Competitive Programming",
+      company: "LeetCode & DSA Practice",
+      description: "Achieved 1550 rating on LeetCode through consistent practice. Developed strong problem-solving skills and algorithmic thinking that enhances my development work.",
+      icon: "🧠",
       color: "from-superman-gold to-superman-gold",
       achievements: [
-        "Architected scalable 3D applications",
-        "Reduced load times by 60%",
-        "Speaking at tech conferences"
+        "Achieved 1550 LeetCode rating",
+        "Solved 300+ coding problems",
+        "Mastered data structures & algorithms"
       ]
     }
   ];
@@ -102,8 +102,8 @@ const Experience = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-superman-blue to-superman-red mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Every hero has an origin story. Here's mine - a journey of growth, 
-            challenges overcome, and powers gained along the way.
+            From a curious B.Tech student to a skilled MERN stack developer. 
+            Here's my journey of growth, learning, and real-world experience.
           </p>
         </motion.div>
 
@@ -209,12 +209,13 @@ const Experience = () => {
               </h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Every day brings new challenges and opportunities to grow. Currently exploring 
-              the frontiers of WebAssembly, AI integration, and next-generation web technologies. 
-              The best is yet to come.
+              Currently in my second year of B.Tech, I'm focused on expanding my knowledge in 
+              advanced web technologies, system design, and software engineering principles. 
+              My goal is to become a well-rounded full-stack developer who can build scalable, 
+              impactful applications.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              {["WebAssembly", "AI/ML Integration", "Advanced 3D Graphics", "Performance Optimization"].map((skill, index) => (
+              {["System Design", "Cloud Computing", "Advanced React", "Microservices", "DevOps"].map((skill, index) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-gradient-to-r from-superman-blue to-superman-red text-white rounded-lg font-medium text-sm"

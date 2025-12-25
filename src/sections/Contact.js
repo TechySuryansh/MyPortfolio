@@ -99,8 +99,8 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-superman-blue to-superman-red mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to build something extraordinary together? Let's connect and create 
-            digital experiences that make a difference.
+            Interested in collaborating on a project or discussing opportunities? 
+            Let's connect and build something amazing together!
           </p>
         </motion.div>
 
@@ -229,7 +229,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-white font-semibold">Location</div>
-                    <div className="text-gray-400">Metropolis, Earth</div>
+                    <div className="text-gray-400">India</div>
                   </div>
                 </div>
 
@@ -239,7 +239,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-white font-semibold">Email</div>
-                    <div className="text-gray-400">hero@example.com</div>
+                    <div className="text-gray-400">suryansh@example.com</div>
                   </div>
                 </div>
 
@@ -286,9 +286,9 @@ const Contact = () => {
                 <span className="text-krypton-crystal font-semibold">Available for Projects</span>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                I'm currently accepting new projects and collaborations. 
-                Whether you need a complete web application, 3D experience, 
-                or just want to discuss ideas, I'd love to hear from you!
+                I'm currently open to internship opportunities, freelance projects, 
+                and collaborations. Whether you have a project idea, want to discuss 
+                MERN stack development, or just want to connect, I'd love to hear from you!
               </p>
             </div>
           </motion.div>

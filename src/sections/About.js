@@ -61,36 +61,36 @@ const About = () => {
           >
             <div className="krypton-panel floating-card">
               <h3 className="text-2xl font-hero text-krypton-crystal mb-4">
-                The Journey Begins
+                The Student Developer
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Like a hero discovering their powers, my journey into web development 
-                started with curiosity and grew into a passion for creating extraordinary 
-                digital experiences. Every challenge became a stepping stone, every bug 
-                a villain to defeat.
+                Currently pursuing B.Tech at Newton School of Technology, I discovered my passion 
+                for web development through the MERN stack. What started as curiosity about how 
+                websites work evolved into a deep love for building scalable, interactive applications 
+                that solve real-world problems.
               </p>
             </div>
 
             <div className="krypton-panel floating-card">
               <h3 className="text-2xl font-hero text-krypton-crystal mb-4">
-                Powers & Abilities
+                MERN Stack Mastery
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                Armed with React, Three.js, and modern web technologies, I craft 
-                immersive experiences that bridge the gap between imagination and reality. 
-                My mission: to build applications that not only function flawlessly 
-                but inspire and delight users.
+                Specialized in MongoDB, Express.js, React.js, and Node.js, I create full-stack 
+                applications from database design to responsive user interfaces. My experience 
+                includes building RESTful APIs, implementing authentication systems, and creating 
+                dynamic, data-driven web applications.
               </p>
             </div>
 
             <div className="krypton-panel floating-card">
               <h3 className="text-2xl font-hero text-krypton-crystal mb-4">
-                The Mission
+                Problem-Solving Mindset
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                To use technology as a force for good, creating web experiences that 
-                make the digital world more accessible, beautiful, and engaging. 
-                Every project is an opportunity to make a positive impact.
+                With a 1550 rating on LeetCode, I bring strong algorithmic thinking to every project. 
+                I believe that good code is not just functional but efficient, readable, and maintainable. 
+                Every challenge is an opportunity to learn and grow as a developer.
               </p>
             </div>
           </motion.div>
@@ -104,10 +104,10 @@ const About = () => {
           >
             <div className="grid grid-cols-2 gap-6">
               {[
-                { number: "50+", label: "Projects Completed", icon: "🚀" },
-                { number: "3+", label: "Years Experience", icon: "⚡" },
-                { number: "15+", label: "Technologies Mastered", icon: "💎" },
-                { number: "100%", label: "Client Satisfaction", icon: "🌟" },
+                { number: "1550", label: "LeetCode Rating", icon: "🧠" },
+                { number: "2nd", label: "Year B.Tech Student", icon: "🎓" },
+                { number: "1", label: "Internship Completed", icon: "💼" },
+                { number: "MERN", label: "Stack Specialist", icon: "⚡" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -131,9 +131,9 @@ const About = () => {
               </h3>
               <div className="space-y-3">
                 {[
-                  { value: "Innovation", description: "Always pushing boundaries" },
-                  { value: "Quality", description: "Excellence in every detail" },
-                  { value: "Impact", description: "Creating meaningful solutions" },
+                  { value: "Learning", description: "Continuous growth mindset" },
+                  { value: "Quality", description: "Clean, efficient code" },
+                  { value: "Impact", description: "Building meaningful solutions" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-superman-gold rounded-full"></div>

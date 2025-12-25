@@ -7,42 +7,42 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Frontend Powers",
-      icon: "⚡",
+      title: "Frontend Development",
+      icon: "⚛️",
       color: "from-superman-blue to-superman-blue-light",
       skills: [
-        { name: "React.js", level: 95, icon: "⚛️" },
-        { name: "JavaScript/ES6+", level: 90, icon: "🟨" },
-        { name: "TypeScript", level: 85, icon: "🔷" },
-        { name: "HTML5/CSS3", level: 95, icon: "🎨" },
-        { name: "Tailwind CSS", level: 90, icon: "💨" },
-        { name: "Sass/SCSS", level: 85, icon: "💅" },
+        { name: "React.js", level: 90, icon: "⚛️" },
+        { name: "JavaScript/ES6+", level: 88, icon: "🟨" },
+        { name: "HTML5/CSS3", level: 92, icon: "🎨" },
+        { name: "Tailwind CSS", level: 85, icon: "💨" },
+        { name: "Bootstrap", level: 80, icon: "🅱️" },
+        { name: "Redux/Context API", level: 82, icon: "🔄" },
       ]
     },
     {
-      title: "3D & Animation",
-      icon: "🌟",
+      title: "Backend Development",
+      icon: "🚀",
       color: "from-superman-red to-superman-red-light",
       skills: [
-        { name: "Three.js", level: 80, icon: "🎯" },
-        { name: "React Three Fiber", level: 85, icon: "🔥" },
-        { name: "Framer Motion", level: 90, icon: "🎭" },
-        { name: "GSAP", level: 75, icon: "⚡" },
-        { name: "WebGL", level: 70, icon: "🌈" },
-        { name: "Blender", level: 65, icon: "🎲" },
+        { name: "Node.js", level: 85, icon: "🟢" },
+        { name: "Express.js", level: 88, icon: "🚀" },
+        { name: "MongoDB", level: 82, icon: "🍃" },
+        { name: "Mongoose", level: 80, icon: "📊" },
+        { name: "RESTful APIs", level: 85, icon: "🔗" },
+        { name: "JWT Authentication", level: 78, icon: "🔐" },
       ]
     },
     {
-      title: "Backend & Tools",
-      icon: "💎",
+      title: "Tools & Technologies",
+      icon: "🛠️",
       color: "from-superman-gold to-superman-gold",
       skills: [
-        { name: "Node.js", level: 80, icon: "🟢" },
-        { name: "Express.js", level: 75, icon: "🚀" },
-        { name: "MongoDB", level: 70, icon: "🍃" },
-        { name: "Git/GitHub", level: 90, icon: "📚" },
-        { name: "Webpack/Vite", level: 80, icon: "📦" },
-        { name: "Docker", level: 65, icon: "🐳" },
+        { name: "Git/GitHub", level: 88, icon: "📚" },
+        { name: "VS Code", level: 90, icon: "💻" },
+        { name: "Postman", level: 85, icon: "📮" },
+        { name: "npm/yarn", level: 82, icon: "📦" },
+        { name: "Vercel/Netlify", level: 80, icon: "🌐" },
+        { name: "Problem Solving", level: 92, icon: "🧩" },
       ]
     }
   ];
@@ -86,8 +86,8 @@ const Skills = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-superman-blue to-superman-red mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Every hero needs their arsenal. Here are the technologies and skills 
-            I've mastered to build extraordinary web experiences.
+            My technical arsenal as a MERN Stack Developer. These are the technologies 
+            I use to build scalable, efficient, and user-friendly web applications.
           </p>
         </motion.div>
 
@@ -185,9 +185,9 @@ const Skills = () => {
               Always Learning, Always Growing
             </h3>
             <p className="text-gray-300 leading-relaxed">
-              The world of web development evolves rapidly, and so do I. Currently exploring 
-              WebAssembly, AI integration in web apps, and advanced 3D rendering techniques. 
-              The journey of learning never ends for a true digital hero.
+              As a B.Tech student and aspiring software engineer, I'm constantly learning new technologies 
+              and improving my skills. Currently exploring advanced React patterns, microservices architecture, 
+              and cloud deployment strategies. The journey of a developer never ends!
             </p>
           </div>
         </motion.div>
