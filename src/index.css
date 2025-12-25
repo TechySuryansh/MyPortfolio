@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-superman-dark text-white font-body overflow-x-hidden;
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-superman-dark;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-superman-blue rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-superman-blue-light;
+  }
+}
+
+@layer components {
+  .hero-text {
+    @apply font-hero text-6xl md:text-8xl font-black bg-gradient-to-r from-superman-blue via-superman-red to-superman-gold bg-clip-text text-transparent;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  }
+  
+  .glow-border {
+    @apply border border-krypton-crystal;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.3), inset 0 0 20px rgba(78, 205, 196, 0.1);
+  }
+  
+  .energy-button {
+    @apply relative px-8 py-4 bg-gradient-to-r from-superman-blue to-superman-red text-white font-semibold rounded-lg overflow-hidden transition-all duration-300;
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
+  }
+  
+  .energy-button:hover {
+    @apply scale-105;
+    box-shadow: 0 0 30px rgba(220, 20, 60, 0.6);
+  }
+  
+  .energy-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 -translate-x-full transition-all duration-500;
+    transform: skewX(-45deg);
+  }
+  
+  .energy-button:hover::before {
+    @apply opacity-20 translate-x-full;
+  }
+  
+  .krypton-panel {
+    @apply bg-gradient-to-br from-superman-dark-light/80 to-superman-dark/60 backdrop-blur-lg rounded-xl p-6;
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .floating-card {
+    @apply transform transition-all duration-300 hover:scale-105 hover:-translate-y-2;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}

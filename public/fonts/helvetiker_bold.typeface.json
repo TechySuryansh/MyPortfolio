@@ -1,0 +1,26 @@
+{
+  "glyphs": {
+    "S": {
+      "ha": 1000,
+      "x_min": 0,
+      "x_max": 800,
+      "o": "m 400 0 q 200 0 100 100 q 0 200 0 400 q 0 600 100 700 q 200 800 400 800 q 600 800 700 700 q 800 600 800 400 q 800 200 700 100 q 600 0 400 0 z"
+    }
+  },
+  "familyName": "Helvetiker",
+  "ascender": 800,
+  "descender": -200,
+  "underlinePosition": -100,
+  "underlineThickness": 50,
+  "boundingBox": {
+    "yMin": -200,
+    "yMax": 800,
+    "xMin": 0,
+    "xMax": 1000
+  },
+  "resolution": 1000,
+  "original_font_information": {
+    "format": 0,
+    "copyright": "Helvetiker Font"
+  }
+}
