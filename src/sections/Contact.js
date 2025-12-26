@@ -22,14 +22,14 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
     setIsSubmitting(false);
-    
+
     // Show success message (you can implement a toast notification here)
     alert('Message sent successfully! I\'ll get back to you soon.');
   };
@@ -38,20 +38,20 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: '🐙',
-      url: 'https://github.com',
+      url: 'https://github.com/TechySuryansh',
       color: 'hover:text-gray-400'
     },
     {
       name: 'LinkedIn',
       icon: '💼',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/suryansh-singh-7ba737363/',
       color: 'hover:text-blue-400'
     },
     {
-      name: 'Twitter',
-      icon: '🐦',
-      url: 'https://twitter.com',
-      color: 'hover:text-blue-400'
+      name: 'LeetCode',
+      icon: '💻',
+      url: 'https://leetcode.com/u/suryanshsingh55/',
+      color: 'hover:text-yellow-400'
     },
     {
       name: 'Email',
@@ -99,7 +99,7 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-superman-blue to-superman-red mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Interested in collaborating on a project or discussing opportunities? 
+            Interested in collaborating on a project or discussing opportunities?
             Let's connect and build something amazing together!
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ const Contact = () => {
               <h3 className="text-2xl font-hero text-krypton-crystal mb-6">
                 Send a Message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Input */}
                 <div>
@@ -190,9 +190,8 @@ const Contact = () => {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full energy-button relative overflow-hidden ${
-                    isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full energy-button relative overflow-hidden ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
+                    }`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                 >
@@ -221,7 +220,7 @@ const Contact = () => {
               <h3 className="text-2xl font-hero text-krypton-crystal mb-6">
                 Get In Touch
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-superman-blue to-superman-blue-light rounded-lg flex items-center justify-center">
@@ -260,7 +259,7 @@ const Contact = () => {
               <h3 className="text-2xl font-hero text-krypton-crystal mb-6">
                 Connect With Me
               </h3>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -286,8 +285,8 @@ const Contact = () => {
                 <span className="text-krypton-crystal font-semibold">Available for Projects</span>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                I'm currently open to internship opportunities, freelance projects, 
-                and collaborations. Whether you have a project idea, want to discuss 
+                I'm currently open to internship opportunities, freelance projects,
+                and collaborations. Whether you have a project idea, want to discuss
                 MERN stack development, or just want to connect, I'd love to hear from you!
               </p>
             </div>
