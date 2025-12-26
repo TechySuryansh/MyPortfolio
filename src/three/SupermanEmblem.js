@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Text, Center } from '@react-three/drei';
 import * as THREE from 'three';
@@ -11,16 +11,23 @@ const SupermanEmblem = ({ position = [0, 0, 0], scale = 1 }) => {
   const glowRef = useRef();
   const [hovered, setHovered] = useState(false);
 
+  const particleGeometry = useMemo(() => new THREE.SphereGeometry(0.02, 8, 8), []);
+  const particleMaterial = useMemo(() => new THREE.MeshBasicMaterial({
+    color: "#0066cc",
+    transparent: true,
+    opacity: 0.6
+  }), []);
+
   useFrame((state) => {
     if (groupRef.current) {
       // More dynamic rotation with varying speeds
       groupRef.current.rotation.y = state.clock.elapsedTime * 0.4 + Math.sin(state.clock.elapsedTime * 0.5) * 0.2;
       groupRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
-      
+
       // Floating animation with more complexity
       const floatY = Math.sin(state.clock.elapsedTime * 1.2) * 0.15 + Math.cos(state.clock.elapsedTime * 0.8) * 0.05;
       groupRef.current.position.y = position[1] + floatY;
-      
+
       // Pulsing scale effect
       const pulseScale = 1 + Math.sin(state.clock.elapsedTime * 2) * 0.05;
       groupRef.current.scale.setScalar(scale * pulseScale);
@@ -46,9 +53,9 @@ const SupermanEmblem = ({ position = [0, 0, 0], scale = 1 }) => {
   });
 
   return (
-    <group 
-      ref={groupRef} 
-      position={position} 
+    <group
+      ref={groupRef}
+      position={position}
       scale={scale}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
@@ -123,7 +130,7 @@ const SupermanEmblem = ({ position = [0, 0, 0], scale = 1 }) => {
         distance={8}
         decay={2}
       />
-      
+
       <pointLight
         position={[0, 0, -0.5]}
         color="#b8860b"
@@ -141,14 +148,9 @@ const SupermanEmblem = ({ position = [0, 0, 0], scale = 1 }) => {
             Math.sin((i / 8) * Math.PI * 2) * 2,
             0.3
           ]}
-        >
-          <sphereGeometry args={[0.02, 8, 8]} />
-          <meshBasicMaterial
-            color="#0066cc"
-            transparent
-            opacity={0.6}
-          />
-        </mesh>
+          geometry={particleGeometry}
+          material={particleMaterial}
+        />
       ))}
     </group>
   );

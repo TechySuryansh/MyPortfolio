@@ -61,7 +61,7 @@ const Hero = () => {
               scale: [1, 1.02, 1, 1.01, 1],
             }}
             transition={{ duration: 6, repeat: Infinity }}
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               textShadow: '0 0 60px rgba(184, 134, 11, 1)',
               transition: { duration: 0.3 }
@@ -104,7 +104,7 @@ const Hero = () => {
             <motion.button
               onClick={() => scrollToSection('projects')}
               className="energy-button group relative overflow-hidden"
-              whileHover={{ 
+              whileHover={{
                 scale: 1.1,
                 y: -5,
                 transition: { duration: 0.3 }
@@ -119,7 +119,7 @@ const Hero = () => {
             <motion.button
               onClick={() => scrollToSection('contact')}
               className="px-8 py-4 border-2 border-superman-gold text-superman-gold font-semibold rounded-lg hover:bg-superman-gold hover:text-superman-dark transition-all duration-500 relative overflow-hidden group"
-              whileHover={{ 
+              whileHover={{
                 scale: 1.1,
                 y: -5,
                 boxShadow: '0 0 40px rgba(184, 134, 11, 0.6)',
@@ -155,14 +155,14 @@ const Hero = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className={`absolute rounded-full ${
-              i % 3 === 0 ? 'w-3 h-3 bg-krypton-crystal' :
-              i % 3 === 1 ? 'w-2 h-2 bg-superman-gold' :
-              'w-1 h-1 bg-superman-blue'
-            } opacity-40`}
+            className={`absolute rounded-full ${i % 3 === 0 ? 'w-3 h-3 bg-krypton-crystal' :
+                i % 3 === 1 ? 'w-2 h-2 bg-superman-gold' :
+                  'w-1 h-1 bg-superman-blue'
+              } opacity-40`}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+              willChange: 'transform',
             }}
             animate={{
               y: [0, -100 - Math.random() * 100, 0],

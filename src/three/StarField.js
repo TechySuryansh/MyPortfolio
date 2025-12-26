@@ -3,24 +3,24 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
-const Stars = ({ count = 8000 }) => {
+const Stars = ({ count = 5000 }) => {
   const ref = useRef();
-  
+
   const [positions, colors] = useMemo(() => {
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
-    
+
     for (let i = 0; i < count; i++) {
       // Create multiple layers of stars at different distances
       const layer = Math.floor(Math.random() * 3);
       const radius = 15 + layer * 15 + Math.random() * 10;
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(Math.random() * 2 - 1);
-      
+
       positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
       positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
       positions[i * 3 + 2] = radius * Math.cos(phi);
-      
+
       // Varied star colors - darker blues, purples, and whites
       const starType = Math.random();
       if (starType < 0.3) {
@@ -41,7 +41,7 @@ const Stars = ({ count = 8000 }) => {
         colors[i * 3 + 2] = intensity;
       }
     }
-    
+
     return [positions, colors];
   }, [count]);
 
@@ -51,7 +51,7 @@ const Stars = ({ count = 8000 }) => {
       ref.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.1) * 0.1;
       ref.current.rotation.y = state.clock.elapsedTime * 0.03;
       ref.current.rotation.z = Math.cos(state.clock.elapsedTime * 0.05) * 0.05;
-      
+
       // Pulsing effect
       const scale = 1 + Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
       ref.current.scale.setScalar(scale);
@@ -77,13 +77,19 @@ const Stars = ({ count = 8000 }) => {
 // Add shooting stars
 const ShootingStars = () => {
   const groupRef = useRef();
-  
+  const geometry = useMemo(() => new THREE.SphereGeometry(0.05, 8, 8), []);
+  const material = useMemo(() => new THREE.MeshBasicMaterial({
+    color: "#ffffff",
+    transparent: true,
+    opacity: 0.6
+  }), []);
+
   useFrame((state) => {
     if (groupRef.current) {
       groupRef.current.children.forEach((star, index) => {
         star.position.x -= 0.1 + index * 0.02;
         star.position.y -= 0.05 + index * 0.01;
-        
+
         if (star.position.x < -50) {
           star.position.x = 50;
           star.position.y = Math.random() * 20 - 10;
@@ -103,14 +109,9 @@ const ShootingStars = () => {
             Math.random() * 20 - 10,
             Math.random() * 20 - 10
           ]}
-        >
-          <sphereGeometry args={[0.05, 8, 8]} />
-          <meshBasicMaterial
-            color="#ffffff"
-            transparent
-            opacity={0.6}
-          />
-        </mesh>
+          geometry={geometry}
+          material={material}
+        />
       ))}
     </group>
   );
@@ -120,6 +121,7 @@ const StarField = () => {
   return (
     <div className="fixed inset-0 -z-10">
       <Canvas
+        dpr={[1, 2]}
         camera={{ position: [0, 0, 1], fov: 75 }}
         style={{ background: 'transparent' }}
       >

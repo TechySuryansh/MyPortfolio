@@ -7,7 +7,7 @@ const Experience = () => {
 
   const journeySteps = [
     {
-      year: "2022",
+      year: "2024",
       title: "The Beginning",
       role: "Started B.Tech Journey",
       company: "Newton School of Technology",
@@ -21,7 +21,7 @@ const Experience = () => {
       ]
     },
     {
-      year: "2023",
+      year: "2024",
       title: "Web Development Discovery",
       role: "MERN Stack Learning",
       company: "Self-Learning & Projects",
@@ -35,7 +35,7 @@ const Experience = () => {
       ]
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Industry Experience",
       role: "Software Development Intern",
       company: "Alphavima Technologies",
@@ -49,7 +49,7 @@ const Experience = () => {
       ]
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Problem Solving Master",
       role: "Competitive Programming",
       company: "LeetCode & DSA Practice",
