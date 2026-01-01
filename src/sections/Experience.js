@@ -11,12 +11,12 @@ const Experience = () => {
       title: "The Beginning",
       role: "Started B.Tech Journey",
       company: "Newton School of Technology",
-      description: "Began my computer science education and discovered the fascinating world of programming. Started with C++ and basic algorithms, laying the foundation for my development career.",
+      description: "Began my computer science education and discovered the fascinating world of programming. Started with python and basic algorithms, laying the foundation for my development career.",
       icon: "🎓",
       color: "from-krypton-crystal to-krypton-energy",
       achievements: [
         "Learned programming fundamentals",
-        "Started with C++ and DSA",
+        "Started with python and DSA",
         "Built first console applications"
       ]
     },
